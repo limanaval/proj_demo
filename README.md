@@ -1,2 +1,2 @@
 # proj_demo
-Projeto de teste para demostração de arquivos
+Projeto para demostração e treinamento de código python através da IDE VSCODE. 
