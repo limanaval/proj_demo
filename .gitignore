@@ -1,40 +1,52 @@
 # ------------------------------------
-# 1. Arquivos de Log e Temporários
+# 1. Ambientes Virtuais (Virtual Environments)
 # ------------------------------------
-*.log
-*.tmp
-*.bak
-temp/
-/tmp/
+# A pasta do ambiente virtual (o mais importante para ignorar!)
+# O ambiente virtual deve ser recriado localmente por cada dev.
+venv/
+.venv/
+
+# Ambientes criados por outros gerenciadores (ex: Conda)
+.ipynb_checkpoints # Notebooks Jupyter
+env/
+build/
+develop-eggs/
+.eggs/
 
 # ------------------------------------
-# 2. Pastas de Dependências
-# (Essencial para projetos Node.js/JavaScript)
+# 2. Arquivos de Cache e Bytecode
 # ------------------------------------
-# O conteúdo da pasta node_modules pode ser reinstalado por outros
-node_modules/
-/vendor/ # Comum em projetos PHP ou Ruby
+# Arquivos .pyc e pastas __pycache__ criadas pelo Python
+__pycache__/
+*.pyc
+
+# Arquivos de cache gerados por ferramentas (ex: pytest, mypy)
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+htmlcov/
+.nox/
 
 # ------------------------------------
-# 3. Arquivos de IDE (VS Code) e Sistema
+# 3. Arquivos de IDEs e Editores
 # ------------------------------------
-# Ignora a pasta de configurações do VS Code local (workspace settings)
+# Configurações do VS Code (ignoradas para manter o projeto limpo)
 .vscode/
 
-# Arquivos de sistema do macOS (se estiver usando Mac)
-.DS_Store
+# Arquivos de IDEs comuns
+.idea/             # JetBrains (PyCharm, IntelliJ)
+*.swp              # Arquivos de swap do Vim
+*~                 # Arquivos de backup do Emacs
 
 # ------------------------------------
-# 4. Arquivos Gerados/Compilados (Build)
+# 4. Arquivos de Dados e Logs (Opicional, mas recomendado)
 # ------------------------------------
-# Se você tiver uma pasta onde o código final é compilado (ex: React, Vue, TypeScript)
-/dist/
-/build/
+*.log
+*.sqlite3          # Banco de dados local do Django, por exemplo
+db.sqlite3
 
 # ------------------------------------
-# 5. Arquivos de Credenciais (MUITO IMPORTANTE)
-# Nunca suba chaves de API, senhas ou segredos!
+# 5. Arquivos de Credenciais e Configuração Local (MUITO IMPORTANTE!)
 # ------------------------------------
-.env # Arquivos de variáveis de ambiente
-.env.local
-.keys/
+.env               # Variáveis de ambiente
+.flaskenv          # Variáveis de ambiente do Flask
