@@ -1,0 +1,52 @@
+# ------------------------------------
+# 1. Ambientes Virtuais (Virtual Environments)
+# ------------------------------------
+# A pasta do ambiente virtual (o mais importante para ignorar!)
+# O ambiente virtual deve ser recriado localmente por cada dev.
+venv/
+.venv/
+
+# Ambientes criados por outros gerenciadores (ex: Conda)
+.ipynb_checkpoints # Notebooks Jupyter
+env/
+build/
+develop-eggs/
+.eggs/
+
+# ------------------------------------
+# 2. Arquivos de Cache e Bytecode
+# ------------------------------------
+# Arquivos .pyc e pastas __pycache__ criadas pelo Python
+__pycache__/
+*.pyc
+
+# Arquivos de cache gerados por ferramentas (ex: pytest, mypy)
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+htmlcov/
+.nox/
+
+# ------------------------------------
+# 3. Arquivos de IDEs e Editores
+# ------------------------------------
+# Configurações do VS Code (ignoradas para manter o projeto limpo)
+.vscode/
+
+# Arquivos de IDEs comuns
+.idea/             # JetBrains (PyCharm, IntelliJ)
+*.swp              # Arquivos de swap do Vim
+*~                 # Arquivos de backup do Emacs
+
+# ------------------------------------
+# 4. Arquivos de Dados e Logs (Opicional, mas recomendado)
+# ------------------------------------
+*.log
+*.sqlite3          # Banco de dados local do Django, por exemplo
+db.sqlite3
+
+# ------------------------------------
+# 5. Arquivos de Credenciais e Configuração Local (MUITO IMPORTANTE!)
+# ------------------------------------
+.env               # Variáveis de ambiente
+.flaskenv          # Variáveis de ambiente do Flask
