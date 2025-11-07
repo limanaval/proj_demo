@@ -1,0 +1,40 @@
+# ------------------------------------
+# 1. Arquivos de Log e Temporários
+# ------------------------------------
+*.log
+*.tmp
+*.bak
+temp/
+/tmp/
+
+# ------------------------------------
+# 2. Pastas de Dependências
+# (Essencial para projetos Node.js/JavaScript)
+# ------------------------------------
+# O conteúdo da pasta node_modules pode ser reinstalado por outros
+node_modules/
+/vendor/ # Comum em projetos PHP ou Ruby
+
+# ------------------------------------
+# 3. Arquivos de IDE (VS Code) e Sistema
+# ------------------------------------
+# Ignora a pasta de configurações do VS Code local (workspace settings)
+.vscode/
+
+# Arquivos de sistema do macOS (se estiver usando Mac)
+.DS_Store
+
+# ------------------------------------
+# 4. Arquivos Gerados/Compilados (Build)
+# ------------------------------------
+# Se você tiver uma pasta onde o código final é compilado (ex: React, Vue, TypeScript)
+/dist/
+/build/
+
+# ------------------------------------
+# 5. Arquivos de Credenciais (MUITO IMPORTANTE)
+# Nunca suba chaves de API, senhas ou segredos!
+# ------------------------------------
+.env # Arquivos de variáveis de ambiente
+.env.local
+.keys/
